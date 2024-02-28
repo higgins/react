@@ -169,7 +169,8 @@ function getBabelConfig(
   // Controls whether to replace error messages with error codes in production.
   // By default, error messages are replaced in production.
   if (!isDevelopment && bundle.minifyWithProdErrorCodes !== false) {
-    options.plugins.push(require('../error-codes/transform-error-messages'));
+    console.log(`Skipping registering transform error messages. minifiyWithProdErrorCodes: ${bundle.minifyWithProdErrorCodes}`);
+    //    options.plugins.push(require('../error-codes/transform-error-messages'));
   }
 
   return options;
